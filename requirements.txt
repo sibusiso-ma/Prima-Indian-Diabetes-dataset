@@ -7,7 +7,6 @@ seaborn
 shap
 imbalanced-learn
 xgboost
-streamlit
 scikit-learn
 joblib
 
