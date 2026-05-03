@@ -7,7 +7,7 @@ seaborn
 shap
 imbalanced-learn
 xgboost
-streamlit==1.33.0
-scikit-learn==1.6.1
-joblib==1.4.2
+streamlit
+scikit-learn
+joblib
 
