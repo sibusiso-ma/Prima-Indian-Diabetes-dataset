@@ -101,7 +101,7 @@ if page == "EDA":
 
 
 
-    feature = st.selectbox("Select Feature for distribution plotting ", df.drop(columns=['Outcome'],axis=1).columns)
+    feature = st.selectbox("Select Feature for distribution plotting ", df.drop(columns=['Outcome']).columns)
 
     st.subheader(f"{feature}  ")
     fig3 = distribution(df[feature])
@@ -109,8 +109,8 @@ if page == "EDA":
 
 
 
-    x_col = st.selectbox("Select X-axis",df.drop(columns=['Outcome'],axis=1).columns)
-    y_col = st.selectbox("Select Y-axis", df.drop(columns=['Outcome'],axis=1).columns)
+    x_col = st.selectbox("Select X-axis",df.drop(columns=['Outcome']).columns)
+    y_col = st.selectbox("Select Y-axis", df.drop(columns=['Outcome']).columns)
 
     feature = [x_col,y_col]
 
@@ -155,17 +155,17 @@ if page == "EDA":
     st.pyplot(fig)
 
 
-    feature = st.selectbox("Select Feature for boxplot  ", df.drop(columns=['Outcome'],axis=1).columns)
+    feature = st.selectbox("Select Feature for boxplot  ", df.drop(columns=['Outcome']).columns)
     fig = boxplot(df,feature)
     st.pyplot(fig)
 
-    feature = st.selectbox("Select Feature for violinplot  ",df.drop(columns=['Outcome'],axis=1).columns)
+    feature = st.selectbox("Select Feature for violinplot  ",df.drop(columns=['Outcome']).columns)
     fig = violinplot(df,feature)
     st.pyplot(fig)
 
 
 
-    feature = st.selectbox("Select Feature for kdeplot  ", df.drop(columns=['Outcome'],axis=1).columns)
+    feature = st.selectbox("Select Feature for kdeplot  ", df.drop(columns=['Outcome']).columns)
     fig = kdeplot(df,feature)
     st.pyplot(fig)
 
