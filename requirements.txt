@@ -6,5 +6,5 @@ seaborn
 shap
 imbalanced-learn
 xgboost
-scikit-learn==1.6.1
-joblib==1.4.2
+scikit-learn
+joblib
