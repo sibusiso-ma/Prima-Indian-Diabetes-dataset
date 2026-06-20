@@ -3,5 +3,10 @@ imbalanced-learn
 xgboost
 scikit-learn
 joblib
-scikit-learn
 scipy
+pandas
+numpy
+matplotlib
+seaborn
+streamlit
+plotly
