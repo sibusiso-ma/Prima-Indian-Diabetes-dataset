@@ -23,19 +23,23 @@ print(sklearn.__version__)
 
 
 def create_features(X):
-            X = X.copy()
-            X['PregnancyGroup'] = pd.cut(
-                X['Pregnancies'],
-                bins=[-1,0,3,6,20],
-                labels=['0','1-3','4-6','7+']
-            )
-            X['AgeGroup'] = pd.cut(
-                X['Age'],
-                bins=[20,30,40,50,60,80],
-                labels=['20-30','31-40','41-50','51-60','61-80']
-            )
-            X['Glucose_BMI'] = X['Glucose'] * X['BMI']
-            return X
+    X = X.copy()
+
+    X['PregnancyGroup'] = pd.cut(
+        X['Pregnancies'],
+        bins=[-1, 0, 3, 6, 20],
+        labels=['0', '1-3', '4-6', '7+']
+    )
+
+    X['AgeGroup'] = pd.cut(
+        X['Age'],
+        bins=[20, 30, 40, 50, 60, 80],
+        labels=['20-30', '31-40', '41-50', '51-60', '61-80']
+    )
+
+    X['Glucose_BMI'] = X['Glucose'] * X['BMI']
+
+    return X
 
 feature_creator = FunctionTransformer(create_features, validate=False)
 
